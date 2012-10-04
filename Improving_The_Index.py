@@ -1,14 +1,4 @@
-# The current index includes a url in the list of urls
-# for a keyword multiple times if the keyword appears
-# on that page more than once.
 
-# It might be better to only include the same url
-# once in the url list for a keyword, even if it appears
-# many times.
-
-# Modify add_to_index so that a given url is only
-# included once in the url list for a keyword,
-# no matter how many times that keyword appears.
 
 def add_to_index(index, keyword, url):
     for entry in index:
@@ -95,6 +85,3 @@ def lookup(index, keyword):
             return entry[1]
     return None
 
-#index = crawl_web("http://www.udacity.com/cs101x/index.html")
-#print lookup(index,"is")
-#>>> ['http://www.udacity.com/cs101x/index.html']
